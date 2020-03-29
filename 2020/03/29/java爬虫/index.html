@@ -6,15 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 随笔 | Hexo</title>
+  <title>java爬虫 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/index.html">
+  <meta name="description" content="简介：这是一个非常简单的java爬虫项目，都只使用了最简单的java技术，框架部分只使用了webmagic这个开源爬虫框架，项目参考了网络爬虫 HttpClient Jsoup WebMagic 爬取的网站是bilibili任意关键词搜索结果，爬取内容仅为视频标题，up主昵称+投稿时间（本来想爬取BV号，但是视频页面不显示BV号，太麻烦了），视频简介。是一个java爬虫练手项目。详细代码请移步g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java爬虫">
+<meta property="og:url" content="http://yoursite.com/2020/03/29/java%E7%88%AC%E8%99%AB/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="简介：这是一个非常简单的java爬虫项目，都只使用了最简单的java技术，框架部分只使用了webmagic这个开源爬虫框架，项目参考了网络爬虫 HttpClient Jsoup WebMagic 爬取的网站是bilibili任意关键词搜索结果，爬取内容仅为视频标题，up主昵称+投稿时间（本来想爬取BV号，但是视频页面不显示BV号，太麻烦了），视频简介。是一个java爬虫练手项目。详细代码请移步g">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/kind1ess/myblogimg/master/img/20200329175715.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/kind1ess/myblogimg/master/img/20200329193517.png">
+<meta property="article:published_time" content="2020-03-29T11:52:30.000Z">
+<meta property="article:modified_time" content="2020-03-29T11:52:51.475Z">
 <meta property="article:author" content="kindless">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="爬虫">
+<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/kind1ess/myblogimg/master/img/20200329175715.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -171,35 +181,143 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-  
+<article id="post-java爬虫" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/29/java%E7%88%AC%E8%99%AB/" class="archive-article-date">
-  	<time datetime="2020-03-29T11:52:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/29/java%E7%88%AC%E8%99%AB/">java爬虫</a>
+    <h1 class="article-title" itemprop="name">
+      java爬虫
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/03/29/java%E7%88%AC%E8%99%AB/" class="archive-article-date">
+  	<time datetime="2020-03-29T11:52:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h3 id="简介：这是一个非常简单的java爬虫项目，都只使用了最简单的java技术，框架部分只使用了webmagic这个开源爬虫框架，项目参考了网络爬虫-HttpClient-Jsoup-WebMagic-爬取的网站是bilibili任意关键词搜索结果，爬取内容仅为视频标题，up主昵称-投稿时间（本来想爬取BV号，但是视频页面不显示BV号，太麻烦了），视频简介。是一个java爬虫练手项目。详细代码请移步github。"><a href="#简介：这是一个非常简单的java爬虫项目，都只使用了最简单的java技术，框架部分只使用了webmagic这个开源爬虫框架，项目参考了网络爬虫-HttpClient-Jsoup-WebMagic-爬取的网站是bilibili任意关键词搜索结果，爬取内容仅为视频标题，up主昵称-投稿时间（本来想爬取BV号，但是视频页面不显示BV号，太麻烦了），视频简介。是一个java爬虫练手项目。详细代码请移步github。" class="headerlink" title="简介：这是一个非常简单的java爬虫项目，都只使用了最简单的java技术，框架部分只使用了webmagic这个开源爬虫框架，项目参考了网络爬虫 HttpClient Jsoup WebMagic 爬取的网站是bilibili任意关键词搜索结果，爬取内容仅为视频标题，up主昵称+投稿时间（本来想爬取BV号，但是视频页面不显示BV号，太麻烦了），视频简介。是一个java爬虫练手项目。详细代码请移步github。"></a>简介：这是一个非常简单的java爬虫项目，都只使用了最简单的java技术，框架部分只使用了webmagic这个开源爬虫框架，项目参考了<a href="https://www.bilibili.com/video/BV1jJ411u7rC?from=search&seid=7214890958044769500" target="_blank" rel="noopener">网络爬虫 HttpClient Jsoup WebMagic</a> 爬取的网站是bilibili任意关键词搜索结果，爬取内容仅为视频标题，up主昵称+投稿时间（本来想爬取BV号，但是视频页面不显示BV号，太麻烦了），视频简介。是一个java爬虫练手项目。详细代码请移步<a href="https://github.com/kind1ess/java-webmagic-learning" target="_blank" rel="noopener">github</a>。</h3><a id="more"></a>
+
+<h2 id="一、建立mysql数据库表："><a href="#一、建立mysql数据库表：" class="headerlink" title="一、建立mysql数据库表："></a>一、建立mysql数据库表：</h2><ul>
+<li>建表语句如下</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">create table tb_bilibili</span><br><span class="line">(</span><br><span class="line">    username     varchar(200) not null,</span><br><span class="line">    title        varchar(200) not null,</span><br><span class="line">    introduction varchar(500) not null,</span><br><span class="line">    constraint tb_bilibili_username_uindex</span><br><span class="line">        unique (username)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">alter table tb_bilibili</span><br><span class="line">    add primary key (username);</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、建立maven工程："><a href="#二、建立maven工程：" class="headerlink" title="二、建立maven工程："></a>二、建立maven工程：</h2><ul>
+<li>工程目录：</li>
+</ul>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/kind1ess/myblogimg/master/img/20200329175715.png" alt="image-20200329175713127"></p>
+</blockquote>
+<ul>
+<li>添加如下依赖：</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- https://mvnrepository.com/artifact/us.codecraft/webmagic-core --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>us.codecraft<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>webmagic-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.7.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- https://mvnrepository.com/artifact/us.codecraft/webmagic-extension --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>us.codecraft<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>webmagic-extension<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.7.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.18.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.0.19<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.guava<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>guava<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>16.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>其中用到了webmagic框架的核心包和扩展包，lombok工具，mysql数据库连接工具，布隆过滤器。</p>
+</blockquote>
+<h2 id="三、创建pojo"><a href="#三、创建pojo" class="headerlink" title="三、创建pojo"></a>三、创建pojo</h2><ul>
+<li>Bilibili.java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kindless.webspider.pojo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Bilibili</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String userName;</span><br><span class="line">    <span class="keyword">private</span> String title;</span><br><span class="line">    <span class="keyword">private</span> String introduction;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="四、设置数据库链接"><a href="#四、设置数据库链接" class="headerlink" title="四、设置数据库链接"></a>四、设置数据库链接</h2><blockquote>
+<p>这里使用的是最简单的底层jdbc，所以样板代码很多，不做赘述。</p>
+</blockquote>
+<ul>
+<li>DatabaseConnection.java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kindless.webspider.tools;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DatabaseConnection</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String DBDRIVER = <span class="string">"com.mysql.cj.jdbc.Driver"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String DBURL = <span class="string">"jdbc:mysql://localhost:3306/webspider?useUnicode=true"</span> + <span class="string">"&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String DBUSER = <span class="string">"root"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String DBPASSWORD = <span class="string">"123456"</span>;</span><br><span class="line">    <span class="keyword">private</span> Connection connection = <span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DatabaseConnection</span><span class="params">()</span> <span class="keyword">throws</span> ClassNotFoundException, SQLException </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class.forName(DBDRIVER);</span><br><span class="line">            connection = DriverManager.getConnection(DBURL,DBUSER,DBPASSWORD);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> e;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> e;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Connection <span class="title">getConnection</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> connection;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">(Connection connection)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(connection!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                connection.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">(PreparedStatement preparedStatement)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(preparedStatement!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span>&#123;</span><br><span class="line">                preparedStatement.close();</span><br><span class="line">            &#125;<span class="keyword">catch</span> (SQLException e)&#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">(ResultSet resultSet)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(resultSet!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                resultSet.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>DAO</li>
+</ul>
+<blockquote>
+<p>对数据库的操作只需要实现两个</p>
+<ol>
+<li>按up主昵称+投稿时间查询（为了不重复添加）</li>
+<li>插入新数据</li>
+</ol>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kindless.webspider.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.kindless.webspider.pojo.Bilibili;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">BilibiliDAO</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Bilibili <span class="title">findByBV</span><span class="params">(String bv)</span> <span class="keyword">throws</span> SQLException</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">insert</span><span class="params">(Bilibili bilibili)</span> <span class="keyword">throws</span> SQLException</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="五、service"><a href="#五、service" class="headerlink" title="五、service"></a>五、service</h2><blockquote>
+<p>爬虫的业务有三个：</p>
+<ol>
+<li>保存爬取的数据</li>
+<li>按照作者名查询数据</li>
+<li>判断数据是否存在</li>
+</ol>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kindless.webspider.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.kindless.webspider.pojo.Bilibili;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">BilibiliService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 保存爬取的数据</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> bilibili</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">(Bilibili bilibili)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 根据作者名查找数据</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> userName</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> Bilibili</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Bilibili <span class="title">findByBV</span><span class="params">(String userName)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 判断数据是否存在</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> userName</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> boolean</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isExist</span><span class="params">(String userName)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="六、爬虫过程"><a href="#六、爬虫过程" class="headerlink" title="六、爬虫过程"></a>六、爬虫过程</h2><blockquote>
+<p>接下来就是最重要的爬虫过程部分了，使用了webmagic的框架帮助解析页面，添加请求和保存结果，需要实现PageProcessor类和Pipeline类，webmagic的设计原理主要可以由下图描述：</p>
+<p><img src="https://raw.githubusercontent.com/kind1ess/myblogimg/master/img/20200329193517.png" alt="image-20200329193508654"></p>
+<ul>
+<li>Dowmloader：下载页面</li>
+<li>PageProcessor：解析页面</li>
+<li>Scheduler：管理请求队列</li>
+<li>Pipeline：数据持久化</li>
+<li>Spider：是一个管理整合这四个组件的容器</li>
+</ul>
+</blockquote>
+<h4 id="1、PageProcessor实现"><a href="#1、PageProcessor实现" class="headerlink" title="1、PageProcessor实现"></a>1、PageProcessor实现</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kindless.webspider.task;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.kindless.webspider.pojo.Bilibili;</span><br><span class="line"><span class="keyword">import</span> us.codecraft.webmagic.Page;</span><br><span class="line"><span class="keyword">import</span> us.codecraft.webmagic.Site;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> us.codecraft.webmagic.processor.PageProcessor;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> us.codecraft.webmagic.selector.Html;</span><br><span class="line"><span class="keyword">import</span> us.codecraft.webmagic.selector.Selectable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BilibiliProcessor</span> <span class="keyword">implements</span> <span class="title">PageProcessor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String url = <span class="string">"https://search.bilibili.com/all?keyword=%E7%BD%97%E7%BF%94&amp;from_source=nav_search_new"</span>;<span class="comment">//爬取的地址，理论上可以爬取所有的关键词搜索结果</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Bilibili bilibili = <span class="keyword">new</span> Bilibili();<span class="comment">//创建一个bilibili的实例对象</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">process</span><span class="params">(Page page)</span> </span>&#123;</span><br><span class="line">        String html = page.getHtml().toString();<span class="comment">//测试能否成功获取页面</span></span><br><span class="line">        List&lt;Selectable&gt; list = page.getHtml().css(<span class="string">"div.mixin-list ul li.video-item a.title"</span>).nodes();<span class="comment">//获取每个视频的结点</span></span><br><span class="line">        <span class="keyword">if</span> (list.size()==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="comment">//获取到的列表为空，说明是视频详情页，则解析页面</span></span><br><span class="line">            <span class="keyword">this</span>.saveBilibili(page);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//如果不为空则为列表页，获取每个视频的url并加入到请求队列中</span></span><br><span class="line">            <span class="keyword">for</span>(Selectable selectable:list) &#123;</span><br><span class="line">                String videoUrl = selectable.links().toString();</span><br><span class="line">                page.addTargetRequest(videoUrl);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 解析页面</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> page</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">saveBilibili</span><span class="params">(Page page)</span></span>&#123;</span><br><span class="line">        Bilibili bilibili = <span class="keyword">new</span> Bilibili();</span><br><span class="line">        Html html = page.getHtml();</span><br><span class="line">        String timeString = html.css(<span class="string">"div.video-data span"</span>,<span class="string">"text"</span>).nodes().get(<span class="number">1</span>).toString();</span><br><span class="line">        String userNameString = html.css(<span class="string">"div.name a.username"</span>,<span class="string">"text"</span>).toString();</span><br><span class="line">        String userName = userNameString+<span class="string">" "</span>+timeString;</span><br><span class="line">        String title = html.css(<span class="string">"span.tit"</span>,<span class="string">"text"</span>).toString();</span><br><span class="line">        String introduction = html.css(<span class="string">"div.info"</span>,<span class="string">"text"</span>).nodes().get(<span class="number">0</span>).toString();</span><br><span class="line">        bilibili.setUserName(userName);</span><br><span class="line">        bilibili.setTitle(title);</span><br><span class="line">        bilibili.setIntroduction(introduction);</span><br><span class="line">        page.putField(<span class="string">"bilibili"</span>,bilibili);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> Site site = Site.me()</span><br><span class="line">            .setCharset(<span class="string">"UTF-8"</span>)<span class="comment">//设置编码，防止中文显示乱码</span></span><br><span class="line">            .setRetrySleepTime(<span class="number">1000</span>)<span class="comment">//设置重试间隔时间</span></span><br><span class="line">            .setRetryTimes(<span class="number">3</span>)<span class="comment">//设置重试次数</span></span><br><span class="line">            .setTimeOut(<span class="number">10000</span>);<span class="comment">//设置超时时间</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Site <span class="title">getSite</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> site;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、持久化"><a href="#2、持久化" class="headerlink" title="2、持久化"></a>2、持久化</h4><blockquote>
+<p>实现proess方法，将爬取的数据保存到数据库中</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kindless.webspider.task;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.kindless.webspider.pojo.Bilibili;</span><br><span class="line"><span class="keyword">import</span> com.kindless.webspider.service.BilibiliService;</span><br><span class="line"><span class="keyword">import</span> com.kindless.webspider.service.Imp.BilibiliServiceImp;</span><br><span class="line"><span class="keyword">import</span> us.codecraft.webmagic.ResultItems;</span><br><span class="line"><span class="keyword">import</span> us.codecraft.webmagic.Task;</span><br><span class="line"><span class="keyword">import</span> us.codecraft.webmagic.pipeline.Pipeline;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BilibiliPipeline</span> <span class="keyword">implements</span> <span class="title">Pipeline</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">process</span><span class="params">(ResultItems resultItems, Task task)</span> </span>&#123;</span><br><span class="line">        Bilibili bilibili = resultItems.get(<span class="string">"bilibili"</span>);</span><br><span class="line"></span><br><span class="line">        BilibiliService bilibiliService = <span class="keyword">new</span> BilibiliServiceImp();</span><br><span class="line">        <span class="keyword">if</span>(!bilibiliService.isExist(bilibili.getUserName()))&#123;</span><br><span class="line">            bilibiliService.save(bilibili);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="七、总结"><a href="#七、总结" class="headerlink" title="七、总结"></a>七、总结</h2><p>​    很遗憾的是我暂时还没有能力爬取搜索结果的下一页，因为我无法获取到下一页的url地址，并且下一页的网页结构也是不一样的，这应该是bilibili的一个反爬机制，希望未来能有能力爬取。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/支付宝.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/微信支付.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -219,73 +337,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://kind1ess.github.io/2020/03/29/java%E7%88%AC%E8%99%AB/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0day008/" class="archive-article-date">
-  	<time datetime="2020-03-28T14:33:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0day008/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据结构学习笔记day008</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0day008/">数据结构学习笔记day008</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">栈</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#简介：这是一个非常简单的java爬虫项目，都只使用了最简单的java技术，框架部分只使用了webmagic这个开源爬虫框架，项目参考了网络爬虫-HttpClient-Jsoup-WebMagic-爬取的网站是bilibili任意关键词搜索结果，爬取内容仅为视频标题，up主昵称-投稿时间（本来想爬取BV号，但是视频页面不显示BV号，太麻烦了），视频简介。是一个java爬虫练手项目。详细代码请移步github。"><span class="toc-number">1.</span> <span class="toc-text">简介：这是一个非常简单的java爬虫项目，都只使用了最简单的java技术，框架部分只使用了webmagic这个开源爬虫框架，项目参考了网络爬虫 HttpClient Jsoup WebMagic 爬取的网站是bilibili任意关键词搜索结果，爬取内容仅为视频标题，up主昵称+投稿时间（本来想爬取BV号，但是视频页面不显示BV号，太麻烦了），视频简介。是一个java爬虫练手项目。详细代码请移步github。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、建立mysql数据库表："><span class="toc-number"></span> <span class="toc-text">一、建立mysql数据库表：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、建立maven工程："><span class="toc-number"></span> <span class="toc-text">二、建立maven工程：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、创建pojo"><span class="toc-number"></span> <span class="toc-text">三、创建pojo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、设置数据库链接"><span class="toc-number"></span> <span class="toc-text">四、设置数据库链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、service"><span class="toc-number"></span> <span class="toc-text">五、service</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、爬虫过程"><span class="toc-number"></span> <span class="toc-text">六、爬虫过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、PageProcessor实现"><span class="toc-number">0.1.</span> <span class="toc-text">1、PageProcessor实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、持久化"><span class="toc-number">0.2.</span> <span class="toc-text">2、持久化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、总结"><span class="toc-number"></span> <span class="toc-text">七、总结</span></a>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -311,9 +475,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
