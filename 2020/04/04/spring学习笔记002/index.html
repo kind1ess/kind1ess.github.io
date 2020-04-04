@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: java | kindless</title>
+  <title>spring学习笔记002 | kindless</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="kindless">
-<meta property="og:url" content="http://yoursite.com/tags/java/index.html">
+  <meta name="description" content="Spring基于注解配置（基于Java配置+基于组件扫描）的练习详细代码移步github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spring学习笔记002">
+<meta property="og:url" content="http://yoursite.com/2020/04/04/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0002/index.html">
 <meta property="og:site_name" content="kindless">
+<meta property="og:description" content="Spring基于注解配置（基于Java配置+基于组件扫描）的练习详细代码移步github">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-04T05:31:45.000Z">
+<meta property="article:modified_time" content="2020-04-04T08:19:18.283Z">
 <meta property="article:author" content="kindless">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="spring">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="kindless" type="application/atom+xml">
@@ -177,35 +183,120 @@
           </div>
           <div id="js-content" class="content-ll">
             
+<article id="post-spring学习笔记002" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      spring学习笔记002
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/04/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0002/" class="archive-article-date">
+
+        
+        <a href="/2020/04/04/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0002/" class="archive-article-date">
   	<time datetime="2020-04-04T05:31:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/04/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0002/">spring学习笔记002</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Spring基于注解配置（基于Java配置-基于组件扫描）的练习"><a href="#Spring基于注解配置（基于Java配置-基于组件扫描）的练习" class="headerlink" title="Spring基于注解配置（基于Java配置+基于组件扫描）的练习"></a>Spring基于注解配置（基于Java配置+基于组件扫描）的练习</h2><p>详细代码移步<a href="https://github.com/kind1ess/spring-learn-005" target="_blank" rel="noopener">github</a></p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+<h4 id="一、Spring注解"><a href="#一、Spring注解" class="headerlink" title="一、Spring注解"></a>一、Spring注解</h4><blockquote>
+<ul>
+<li><p>@Component</p>
+<p>注解用法：用在类上。</p>
+<p>注解作用：将当前类作为一个组件加入spring的ioc容器中。</p>
+<p>属性：value：值为ioc容器中的bean对象的key值，即bean对象的id，如果要获取该bean对象则通过该id获取，默认值为类名首字母小写。</p>
+</li>
+<li><p>@Service</p>
+<p>注解用法：用在类上。</p>
+<p>注解作用：将当前类作为一个组件加入spring的ioc容器中，作用与@Component完全相同，是@Component的别名，主要用来标明该类是一个Service类。</p>
+<p>属性：和@Component完全相同。</p>
+<p>源码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Source code recreated from a .class file by IntelliJ IDEA</span></span><br><span class="line"><span class="comment">// (powered by Fernflower decompiler)</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> org.springframework.stereotype;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Documented;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.ElementType;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Retention;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.RetentionPolicy;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Target;</span><br><span class="line"><span class="keyword">import</span> org.springframework.core.annotation.AliasFor;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Target</span>(&#123;ElementType.TYPE&#125;)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Service &#123;</span><br><span class="line">    <span class="meta">@AliasFor</span>(</span><br><span class="line">        annotation = Component<span class="class">.<span class="keyword">class</span></span></span><br><span class="line"><span class="class">    )</span></span><br><span class="line">    String value() default "";</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>@Controller</p>
+<p>与@Service同理。</p>
+</li>
+<li><p>@Repository</p>
+<p>与@Service同理。</p>
+</li>
+<li><p>@Autowired</p>
+<p>注解用法：可以用在成员变量的声明上，构造方法上，以及setter方法上。</p>
+<p>注解作用：根据成员变量的类型、构造方法的参数类型、setter方法的参数类型在ioc容器中寻找一个bean对象，如果没有该类型的bean对象则会报错，如果有多个该类的bean对象，则根据变量或者参数名寻找，若没有符合的则会报错。</p>
+<p>属性：required：boolean类型，默认为true，用于声明该对象是不是必须的。</p>
+<p><strong><em>注：最好用在构造方法或者setter方法上</em></strong></p>
+</li>
+<li><p>@Configuration</p>
+<p>注解用法：用在类上</p>
+<p>注解作用：将该类声明为配置类，配置类的作用与xml配置一样，配置方法是用一个方法返回一个实例对象，并将其存入ioc容器中，方法中将创建对象需要的依赖当作参数传入。</p>
+</li>
+<li><p>@Bean</p>
+<p>注解用法：用在配置类中的返回对象的方法上。</p>
+<p>注解作用：表明将这个方法返回的实例对象存入ioc容器中，方法中的参数需要在ioc容器中寻找一个bean对象传入，寻找bean对象的方法和@Autowired注解相同。</p>
+<p>属性：name、value：用于指定bean对象的id。</p>
+</li>
+<li><p>@Scope</p>
+<p>注解用法：用在配置类中的返回对象的方法上。</p>
+<p>注解作用：标注对象的作用范围。</p>
+<p>属性：scopeName、value：指定对象作用范围，值域：singleTon（单例）、protoType（多例）、request（一次请求）、session（一次会话）、globalSession（全局会话）</p>
+</li>
+<li><p>@ComponentScan</p>
+<p>注解用法：用在类上。</p>
+<p>注解作用：默认从该类的包开始扫描所有该类包同级及其子包的组件（Component）。</p>
+<p>属性：basePackages、value：扫描的包。</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="二、加载配置上下文"><a href="#二、加载配置上下文" class="headerlink" title="二、加载配置上下文"></a>二、加载配置上下文</h4><blockquote>
+<p>使用<code>AnnotationConfigApplicationContext</code>类加载，传入配置类的Class对象。</p>
+</blockquote>
+<h4 id="三、代码示例"><a href="#三、代码示例" class="headerlink" title="三、代码示例"></a>三、代码示例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kind1ess.config;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.mchange.v2.c3p0.ComboPooledDataSource;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.dbutils.QueryRunner;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.ComponentScan;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Scope;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.sql.DataSource;</span><br><span class="line"><span class="keyword">import</span> java.beans.PropertyVetoException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Configuration注解：</span></span><br><span class="line"><span class="comment"> *      作用：指定当前类为配置类， 让这个类的作用和xml的作用一样</span></span><br><span class="line"><span class="comment"> * ComponentScan注解：</span></span><br><span class="line"><span class="comment"> *      作用：指定组件扫描的包</span></span><br><span class="line"><span class="comment"> *          和&lt;context:component-scan base-package="com.kind1ess"&gt;&lt;/context:component-scan&gt;作用相同</span></span><br><span class="line"><span class="comment"> * Bean注解：用于将一个对象加入ioc容器交给spring管理</span></span><br><span class="line"><span class="comment"> *      属性：</span></span><br><span class="line"><span class="comment"> *          name：用于指定bean的id，默认值是当前方法的名称</span></span><br><span class="line"><span class="comment"> *      细节：当创建对象的方法中有参数时，spring会在ioc容器中寻找该参数所属类的对象，如果没有则会报错。</span></span><br><span class="line"><span class="comment"> *          和Autowired注解寻找bean对象的方式相同，即ioc容器里如果有多个该类的对象，则按照对象名称寻找。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan</span>(<span class="string">"com.kind1ess"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AccountConfigure</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建一个QueryRunner对象，并将其放入ioc容器</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> dataSource</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Bean</span>(name = <span class="string">"queryRunner"</span>)</span><br><span class="line">    <span class="meta">@Scope</span>(<span class="string">"prototype"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> QueryRunner <span class="title">createQueryRunner</span><span class="params">(DataSource dataSource)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> QueryRunner(dataSource);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span>(name = <span class="string">"ds"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> DataSource <span class="title">createDataSource</span><span class="params">()</span> <span class="keyword">throws</span> PropertyVetoException </span>&#123;</span><br><span class="line">        ComboPooledDataSource dataSource = <span class="keyword">new</span> ComboPooledDataSource();</span><br><span class="line">        dataSource.setDriverClass(<span class="string">"com.mchange.v2.c3p0.ComboPooledDataSource"</span>);</span><br><span class="line">        dataSource.setJdbcUrl(<span class="string">"jdbc:mysql://localhost:3306/spring_learn?serverTimezone=UTC"</span>);</span><br><span class="line">        dataSource.setUser(<span class="string">"root"</span>);</span><br><span class="line">        dataSource.setPassword(<span class="string">"123456"</span>);</span><br><span class="line">        <span class="keyword">return</span> dataSource;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/支付宝.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/微信支付.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -221,107 +312,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://kind1ess.github.io/2020/04/04/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0002/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/03/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0001/" class="archive-article-date">
-  	<time datetime="2020-04-03T13:33:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/03/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0001/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">spring学习笔记001</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/03/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0001/">spring学习笔记001</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring基于注解配置（基于Java配置-基于组件扫描）的练习"><span class="toc-number">1.</span> <span class="toc-text">Spring基于注解配置（基于Java配置+基于组件扫描）的练习</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、Spring注解"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、Spring注解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、加载配置上下文"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、加载配置上下文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、代码示例"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、代码示例</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/29/java%E7%88%AC%E8%99%AB/" class="archive-article-date">
-  	<time datetime="2020-03-29T11:52:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-29</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/29/java%E7%88%AC%E8%99%AB/">java爬虫</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -347,9 +450,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
