@@ -6,21 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>spring学习笔记002 | kindless</title>
+  <title>数据结构学习笔记day009 | kindless</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Spring基于注解配置（基于Java配置+基于组件扫描）的练习详细代码移步github">
+  <meta name="description" content="队列的基本操作，图片来源于王道考研数据结构视频。 队列一、队列的基本概念 只允许在表的一端进行插入，表的另一端进行删除操作的线性表。   队列的基本操作：  InitQueue(&amp;Q)：初始化队列构造一个空队列。 QueueEmpty(Q)：判断队列是否为空。 EnQueue(&amp;Q,x)：入队，x加入队尾。 DeQueue(&amp;Q,&amp;x)：出队，删除队头元素并用x返回">
 <meta property="og:type" content="article">
-<meta property="og:title" content="spring学习笔记002">
-<meta property="og:url" content="http://yoursite.com/2020/04/04/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0002/index.html">
+<meta property="og:title" content="数据结构学习笔记day009">
+<meta property="og:url" content="http://yoursite.com/2020/04/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0day009/index.html">
 <meta property="og:site_name" content="kindless">
-<meta property="og:description" content="Spring基于注解配置（基于Java配置+基于组件扫描）的练习详细代码移步github">
+<meta property="og:description" content="队列的基本操作，图片来源于王道考研数据结构视频。 队列一、队列的基本概念 只允许在表的一端进行插入，表的另一端进行删除操作的线性表。   队列的基本操作：  InitQueue(&amp;Q)：初始化队列构造一个空队列。 QueueEmpty(Q)：判断队列是否为空。 EnQueue(&amp;Q,x)：入队，x加入队尾。 DeQueue(&amp;Q,&amp;x)：出队，删除队头元素并用x返回">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-04T05:31:45.000Z">
-<meta property="article:modified_time" content="2020-04-05T09:56:50.110Z">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416111419.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416114239.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416115323.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416123650.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416160938.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416163301.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416163608.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416164315.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416164525.png">
+<meta property="article:published_time" content="2020-04-16T03:06:06.000Z">
+<meta property="article:modified_time" content="2020-04-16T08:50:23.932Z">
 <meta property="article:author" content="kindless">
-<meta property="article:tag" content="java">
-<meta property="article:tag" content="spring">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="队列">
+<meta property="article:tag" content="c">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416111419.png">
   
     <link rel="alternative" href="/atom.xml" title="kindless" type="application/atom+xml">
   
@@ -183,82 +195,241 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-spring学习笔记002" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-数据结构学习笔记day009" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      spring学习笔记002
+      数据结构学习笔记day009
     </h1>
   
 
         
-        <a href="/2020/04/04/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0002/" class="archive-article-date">
-  	<time datetime="2020-04-04T05:31:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
+        <a href="/2020/04/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0day009/" class="archive-article-date">
+  	<time datetime="2020-04-16T03:06:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Spring基于注解配置（基于Java配置-基于组件扫描）的练习"><a href="#Spring基于注解配置（基于Java配置-基于组件扫描）的练习" class="headerlink" title="Spring基于注解配置（基于Java配置+基于组件扫描）的练习"></a>Spring基于注解配置（基于Java配置+基于组件扫描）的练习</h2><p>详细代码移步<a href="https://github.com/kind1ess/spring-learn-005" target="_blank" rel="noopener">github</a></p>
-<a id="more"></a>
-
-<h4 id="一、Spring注解"><a href="#一、Spring注解" class="headerlink" title="一、Spring注解"></a>一、Spring注解</h4><blockquote>
+        <p>队列的基本操作，图片来源于<a href="https://www.bilibili.com/video/BV1b7411N798" target="_blank" rel="noopener">王道考研数据结构视频</a>。</p>
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><h4 id="一、队列的基本概念"><a href="#一、队列的基本概念" class="headerlink" title="一、队列的基本概念"></a>一、队列的基本概念</h4><blockquote>
+<p>只允许在表的一端进行插入，表的另一端进行删除操作的线性表。</p>
+</blockquote>
 <ul>
-<li><p>@Component</p>
-<p>注解用法：用在类上。</p>
-<p>注解作用：将当前类作为一个组件加入spring的ioc容器中。</p>
-<p>属性：value：值为ioc容器中的bean对象的key值，即bean对象的id，如果要获取该bean对象则通过该id获取，默认值为类名首字母小写。</p>
-</li>
-<li><p>@Service</p>
-<p>注解用法：用在类上。</p>
-<p>注解作用：将当前类作为一个组件加入spring的ioc容器中，作用与@Component完全相同，是@Component的别名，主要用来标明该类是一个Service类。</p>
-<p>属性：和@Component完全相同。</p>
-<p>源码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Source code recreated from a .class file by IntelliJ IDEA</span></span><br><span class="line"><span class="comment">// (powered by Fernflower decompiler)</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> org.springframework.stereotype;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Documented;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.ElementType;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Retention;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.RetentionPolicy;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Target;</span><br><span class="line"><span class="keyword">import</span> org.springframework.core.annotation.AliasFor;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Target</span>(&#123;ElementType.TYPE&#125;)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Service &#123;</span><br><span class="line">    <span class="meta">@AliasFor</span>(</span><br><span class="line">        annotation = Component<span class="class">.<span class="keyword">class</span></span></span><br><span class="line"><span class="class">    )</span></span><br><span class="line">    String value() default "";</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>@Controller</p>
-<p>与@Service同理。</p>
-</li>
-<li><p>@Repository</p>
-<p>与@Service同理。</p>
-</li>
-<li><p>@Autowired</p>
-<p>注解用法：可以用在成员变量的声明上，构造方法上，以及setter方法上。</p>
-<p>注解作用：根据成员变量的类型、构造方法的参数类型、setter方法的参数类型在ioc容器中寻找一个bean对象，如果没有该类型的bean对象则会报错，如果有多个该类的bean对象，则根据变量或者参数名寻找，若没有符合的则会报错。</p>
-<p>属性：required：boolean类型，默认为true，用于声明该对象是不是必须的。</p>
-<p><strong><em>注：最好用在构造方法或者setter方法上</em></strong></p>
-</li>
-<li><p>@Configuration</p>
-<p>注解用法：用在类上</p>
-<p>注解作用：将该类声明为配置类，配置类的作用与xml配置一样，配置方法是用一个方法返回一个实例对象，并将其存入ioc容器中，方法中将创建对象需要的依赖当作参数传入。</p>
-<p><strong><em>注：Configuration实际上也是一个Component，将其换为Component也完全可以</em></strong></p>
-</li>
-<li><p>@Bean</p>
-<p>注解用法：用在配置类中的返回对象的方法上。</p>
-<p>注解作用：表明将这个方法返回的实例对象存入ioc容器中，方法中的参数需要在ioc容器中寻找一个bean对象传入，寻找bean对象的方法和@Autowired注解相同。</p>
-<p>属性：name、value：用于指定bean对象的id。</p>
-</li>
-<li><p>@Scope</p>
-<p>注解用法：用在配置类中的返回对象的方法上。</p>
-<p>注解作用：标注对象的作用范围。</p>
-<p>属性：scopeName、value：指定对象作用范围，值域：singleTon（单例）、protoType（多例）、request（一次请求）、session（一次会话）、globalSession（全局会话）</p>
-</li>
-<li><p>@ComponentScan</p>
-<p>注解用法：用在类上。</p>
-<p>注解作用：默认从该类的包开始扫描所有该类包同级及其子包的组件（Component）。</p>
-<p>属性：basePackages、value：扫描的包。</p>
-</li>
+<li>队列的基本操作：</li>
+</ul>
+<p><code>InitQueue(&amp;Q)</code>：初始化队列构造一个空队列。</p>
+<p><code>QueueEmpty(Q)</code>：判断队列是否为空。</p>
+<p><code>EnQueue(&amp;Q,x)</code>：入队，x加入队尾。</p>
+<p><code>DeQueue(&amp;Q,&amp;x)</code>：出队，删除队头元素并用x返回。</p>
+<p><code>GetHead(Q,&amp;x)</code>：读取队头元素，用x返回，但不删除。</p>
+<p><code>ClearQueue(&amp;Q)</code>：销毁队列，并释放空间。</p>
+<h4 id="二、队列的顺序存储结构"><a href="#二、队列的顺序存储结构" class="headerlink" title="二、队列的顺序存储结构"></a>二、队列的顺序存储结构</h4><ul>
+<li>类型定义：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize 50</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	ElemType data[MaxSize];</span><br><span class="line">	<span class="keyword">int</span> front,rear;<span class="comment">//分别指向队头和队尾的下一个元素，或者指向队头前一个元素和队尾元素，初始状态front=rear=0</span></span><br><span class="line">&#125;SqQueue;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>图示：</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416111419.png" alt="image-20200416111410846"></p>
+<ul>
+<li>队空条件</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Q.front==Q.rear</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>求队长</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Q.rear-Q.front</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>判队满</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rear==MaxSize<span class="comment">//不能这样判断，因为如果出队了，队列就不满了，但是rear还是等于MaxSize（假溢出）</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>循环队列</li>
+</ul>
+<blockquote>
+<p>把存储队列的顺序队列在逻辑上视为一个环</p>
+<ul>
+<li>图示</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416114239.png" alt="image-20200416114238233"></p>
+<ul>
+<li>方式</li>
+</ul>
+<blockquote>
+<p>取余<code>%MaxSize</code></p>
+<p>front指针移动：</p>
+<p><code>Q.front = (Q.front+1)%MaxSize</code></p>
+<p>rear指针移动：</p>
+<p><code>Q.rear+MaxSize = (Q.rear+1)%MaxSize</code></p>
+<p><code>(Q.rear+MaxSize-Q.front)%MaxSize //因为Q.rear有可能会跑到Q.front前面去</code></p>
+</blockquote>
+<ul>
+<li>判空、判满</li>
+</ul>
+<blockquote>
+<ol>
+<li>牺牲一个存储单元（只存放<code>MaxSize-1</code>个元素）</li>
+</ol>
+<blockquote>
+<ul>
+<li>图示</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416115323.png" alt="image-20200416115322178"></p>
+<ul>
+<li>判空条件：<code>Q.front==Q.rear</code></li>
+<li>判满条件：<code>Q.front==(Q.rear+1)%MaxSize</code></li>
 </ul>
 </blockquote>
-<h4 id="二、加载配置上下文"><a href="#二、加载配置上下文" class="headerlink" title="二、加载配置上下文"></a>二、加载配置上下文</h4><blockquote>
-<p>使用<code>AnnotationConfigApplicationContext</code>类加载，传入配置类的Class对象。</p>
+<ol start="2">
+<li>增加一个变量代表元素个数</li>
+</ol>
+<blockquote>
+<ul>
+<li>变量：<code>Q.size</code></li>
+<li>判空条件：<code>Q.size==0</code></li>
+<li>判满条件：<code>Q.size==MaxSize</code></li>
+</ul>
 </blockquote>
-<h4 id="三、代码示例"><a href="#三、代码示例" class="headerlink" title="三、代码示例"></a>三、代码示例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kind1ess.config;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.mchange.v2.c3p0.ComboPooledDataSource;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.dbutils.QueryRunner;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.ComponentScan;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Scope;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.sql.DataSource;</span><br><span class="line"><span class="keyword">import</span> java.beans.PropertyVetoException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Configuration注解：</span></span><br><span class="line"><span class="comment"> *      作用：指定当前类为配置类， 让这个类的作用和xml的作用一样</span></span><br><span class="line"><span class="comment"> * ComponentScan注解：</span></span><br><span class="line"><span class="comment"> *      作用：指定组件扫描的包</span></span><br><span class="line"><span class="comment"> *          和&lt;context:component-scan base-package="com.kind1ess"&gt;&lt;/context:component-scan&gt;作用相同</span></span><br><span class="line"><span class="comment"> * Bean注解：用于将一个对象加入ioc容器交给spring管理</span></span><br><span class="line"><span class="comment"> *      属性：</span></span><br><span class="line"><span class="comment"> *          name：用于指定bean的id，默认值是当前方法的名称</span></span><br><span class="line"><span class="comment"> *      细节：当创建对象的方法中有参数时，spring会在ioc容器中寻找该参数所属类的对象，如果没有则会报错。</span></span><br><span class="line"><span class="comment"> *          和Autowired注解寻找bean对象的方式相同，即ioc容器里如果有多个该类的对象，则按照对象名称寻找。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan</span>(<span class="string">"com.kind1ess"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AccountConfigure</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建一个QueryRunner对象，并将其放入ioc容器</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> dataSource</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Bean</span>(name = <span class="string">"queryRunner"</span>)</span><br><span class="line">    <span class="meta">@Scope</span>(<span class="string">"prototype"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> QueryRunner <span class="title">createQueryRunner</span><span class="params">(DataSource dataSource)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> QueryRunner(dataSource);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span>(name = <span class="string">"ds"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> DataSource <span class="title">createDataSource</span><span class="params">()</span> <span class="keyword">throws</span> PropertyVetoException </span>&#123;</span><br><span class="line">        ComboPooledDataSource dataSource = <span class="keyword">new</span> ComboPooledDataSource();</span><br><span class="line">        dataSource.setDriverClass(<span class="string">"com.mchange.v2.c3p0.ComboPooledDataSource"</span>);</span><br><span class="line">        dataSource.setJdbcUrl(<span class="string">"jdbc:mysql://localhost:3306/spring_learn?serverTimezone=UTC"</span>);</span><br><span class="line">        dataSource.setUser(<span class="string">"root"</span>);</span><br><span class="line">        dataSource.setPassword(<span class="string">"123456"</span>);</span><br><span class="line">        <span class="keyword">return</span> dataSource;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>增加tag标识（出队tag为0，入队为1）</li>
+</ol>
+<blockquote>
+<p>Tag标识用来表示当前的操作是入队还是出队。</p>
+<ul>
+<li>判空条件：<code>Q.front==Q.rear&amp;&amp;tag==0</code></li>
+<li>判满条件：<code>Q.front==Q.rear&amp;&amp;tag==1</code></li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li>基本操作</li>
+</ul>
+<blockquote>
+<ul>
+<li>初始化</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitQueue</span><span class="params">(SqQueue &amp;Q)</span></span>&#123;</span><br><span class="line">    Q.front = Q.rear = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>判队空</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">QueueEmpty</span><span class="params">(SqQueue Q)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Q.front==Q.rear;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>判队满</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">QueueFull</span><span class="params">(SqQueue Q)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Q.front==(Q.rear+<span class="number">1</span>)%MaxSize;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>入队</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">EnQueue</span><span class="params">(SqQueue &amp;Q,ElemType x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!QueueFull(Q))&#123;<span class="comment">//Q.rear是不是Q.front的前一个元素</span></span><br><span class="line">		Q.data[Q.rear] = x;</span><br><span class="line">        Q.rear = (Q.rear+<span class="number">1</span>)%MaxSize;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>出队</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">DeQueue</span><span class="params">(SqQueue &amp;Q,ElemType &amp;x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!QueueEmpty(Q))&#123;</span><br><span class="line">     	x=Q.data[Q.front];</span><br><span class="line">        Q.front = (Q.front+<span class="number">1</span>)%MaxSize;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</blockquote>
+<h4 id="三、队列的链式存储结构"><a href="#三、队列的链式存储结构" class="headerlink" title="三、队列的链式存储结构"></a>三、队列的链式存储结构</h4><blockquote>
+<p>采用链式存储的队列。</p>
+</blockquote>
+<ul>
+<li>图示</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416123650.png" alt="image-20200416123649160"></p>
+<ul>
+<li>结点类型定义：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;LinkNode;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>链队的类型定义</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    LinkNode *front,*rear;</span><br><span class="line">&#125;LinkQueue;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>基本操作</li>
+</ul>
+<blockquote>
+<ul>
+<li>初始化</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitQueue</span><span class="params">(LinkQueue &amp;Q)</span></span>&#123;</span><br><span class="line">   	Q.front = (LinkNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));</span><br><span class="line">    Q.rear = Q-&gt;front;</span><br><span class="line">    Q.front-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>判队空</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">QueueEmpty</span><span class="params">(LinkQueue Q)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Q.front==Q.rear;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>入队</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">EnQueue</span><span class="params">(LinkQueue &amp;Q,ElemType x)</span></span>&#123;</span><br><span class="line">    LinkNode *s = (LinkNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));</span><br><span class="line">    s-&gt;data = x;</span><br><span class="line">    s-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    Q.rear-&gt;next = s;</span><br><span class="line">    Q.rear = s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>出队</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">DeQueue</span><span class="params">(LinkQueue &amp;Q,ElemType &amp;x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (QueueEmpty(Q))</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    LinkNode *p = Q.front-&gt;next;</span><br><span class="line">    Q.front-&gt;next = p-&gt;next;</span><br><span class="line">    x = p-&gt;data;</span><br><span class="line">    <span class="keyword">if</span>(Q.rear == p)&#123;</span><br><span class="line">        Q.rear = Q.front;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(p);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>基本操作C语言实现</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Elemtype;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">	Elemtype data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;LinkNode;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	LinkNode *front,*rear;</span><br><span class="line">&#125;LinkQueue;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitQueue</span><span class="params">(LinkQueue* Q)</span></span>&#123;</span><br><span class="line">	Q-&gt;front = (LinkNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));</span><br><span class="line">	Q-&gt;rear = Q-&gt;front;</span><br><span class="line">	Q-&gt;front-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">QueueEmpty</span><span class="params">(LinkQueue* Q)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Q-&gt;front==Q-&gt;rear;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">EnQueue</span><span class="params">(LinkQueue* Q,Elemtype x)</span></span>&#123;</span><br><span class="line">	LinkNode* q = (LinkNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));</span><br><span class="line">	q-&gt;data = x;</span><br><span class="line">	q-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">	Q-&gt;rear-&gt;next = q;</span><br><span class="line">	Q-&gt;rear = q; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">QueueLength</span><span class="params">(LinkQueue *Q)</span></span>&#123;</span><br><span class="line">	LinkNode* p = Q-&gt;front-&gt;next;</span><br><span class="line">	<span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">		num++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Elemtype* <span class="title">ToArray</span><span class="params">(LinkQueue	*Q)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> length = QueueLength(Q);</span><br><span class="line">	Elemtype <span class="built_in">array</span>[length];</span><br><span class="line">	LinkNode* p = Q-&gt;front-&gt;next;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">		<span class="built_in">array</span>[i++] = p-&gt;data;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">array</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Elemtype <span class="title">DeQueue</span><span class="params">(LinkQueue* Q)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(QueueEmpty(Q))&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"队列为空，不能出队！\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-9999</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	Elemtype x;</span><br><span class="line">	LinkNode *p = Q-&gt;front-&gt;next; </span><br><span class="line">	x = p-&gt;data;</span><br><span class="line">	Q-&gt;front-&gt;next = p-&gt;next;	<span class="comment">//不移动Q-&gt;front的方法</span></span><br><span class="line">	<span class="keyword">if</span>(Q-&gt;rear==p)</span><br><span class="line">		Q-&gt;rear=Q-&gt;front;</span><br><span class="line">	<span class="built_in">free</span>(p);</span><br><span class="line">	<span class="comment">//移动Q-&gt;front的方法</span></span><br><span class="line">	<span class="comment">//LinkNode *p = Q-&gt;front;</span></span><br><span class="line">	<span class="comment">//x = Q-&gt;front-&gt;next-&gt;data;</span></span><br><span class="line">	<span class="comment">//Q-&gt;front = Q-&gt;front-&gt;next;</span></span><br><span class="line">	<span class="comment">//free(p); </span></span><br><span class="line">	<span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	LinkQueue* Q;</span><br><span class="line">	InitQueue(Q);</span><br><span class="line">	<span class="keyword">int</span> flag = <span class="number">1</span>;</span><br><span class="line"> 	Elemtype x;</span><br><span class="line"> 	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"> 	<span class="keyword">while</span>(flag!=<span class="number">0</span>)&#123;</span><br><span class="line">		 <span class="built_in">printf</span>(<span class="string">"1.入队   2.出队   0.退出\n"</span>);</span><br><span class="line">		 <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;flag);</span><br><span class="line">		 <span class="keyword">switch</span>(flag)&#123;</span><br><span class="line">		 	<span class="keyword">case</span> <span class="number">1</span>: </span><br><span class="line">				 <span class="built_in">printf</span>(<span class="string">"请输入入队元素\n"</span>);</span><br><span class="line">		 		 <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);</span><br><span class="line">				 EnQueue(Q,x);</span><br><span class="line">				 <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;QueueLength(Q);i++)&#123;</span><br><span class="line"> 					<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,*(ToArray(Q)+i));</span><br><span class="line"> 				&#125;</span><br><span class="line">				 <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">2</span>: </span><br><span class="line">				 <span class="built_in">printf</span>(<span class="string">"出队元素：%d\n"</span>,DeQueue(Q));</span><br><span class="line">				 <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;QueueLength(Q);i++)&#123;</span><br><span class="line"> 					<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,*(ToArray(Q)+i));</span><br><span class="line"> 				&#125;</span><br><span class="line">				 <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">default</span>: </span><br><span class="line">			 	 <span class="keyword">break</span>; </span><br><span class="line">		 &#125;	</span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行结果：</p>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416160938.png" alt="image-20200416160935915"></p>
+</blockquote>
+</blockquote>
+<h4 id="四、双端队列"><a href="#四、双端队列" class="headerlink" title="四、双端队列"></a>四、双端队列</h4><ul>
+<li>非连续入栈出栈的序列</li>
+</ul>
+<blockquote>
+<p><strong>出栈序列中每一个元素后面所有比他小的元素组成一个第件序列</strong></p>
+</blockquote>
+<ul>
+<li>合法出栈序列的个数</li>
+</ul>
+<blockquote>
+<ul>
+<li>图示：</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416163301.png" alt="image-20200416163259322"></p>
+</blockquote>
+<ul>
+<li>双端队列的概念</li>
+</ul>
+<blockquote>
+<p>允许两端都可以进行出队入队操作的队列。</p>
+</blockquote>
+<ul>
+<li>图示</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416163608.png" alt="image-20200416163606796"></p>
+<blockquote>
+<p>将一端的插入和删除屏蔽就得到一个栈，将一端的删除屏蔽，另一端的插入屏蔽就得到一个队列。</p>
+</blockquote>
+<ul>
+<li>输出受限的合法序列</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416164315.png" alt="image-20200416164314315"></p>
+<blockquote>
+<p><strong><em>在栈中和法的输出序列都是合法的，只需要将栈中不合法的序列一一检验就可以了</em></strong> </p>
+</blockquote>
+<ul>
+<li>输入受限的合法序列</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200416164525.png" alt="image-20200416164523931"></p>
 
       
 
@@ -303,11 +474,19 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">队列</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c</a>
         		</li>
       		
 		</ul>
@@ -363,7 +542,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://kind1ess.github.io/2020/04/04/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0002/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://kind1ess.github.io/2020/04/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0day009/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -377,18 +556,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/06/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0003/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          spring学习笔记003
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/03/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0001/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">spring学习笔记001</div>
+    <a href="/2020/04/06/spring%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0004/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">spring学习笔记004</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -415,7 +585,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring基于注解配置（基于Java配置-基于组件扫描）的练习"><span class="toc-number">1.</span> <span class="toc-text">Spring基于注解配置（基于Java配置+基于组件扫描）的练习</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、Spring注解"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、Spring注解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、加载配置上下文"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、加载配置上下文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、代码示例"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、代码示例</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#队列"><span class="toc-number">1.</span> <span class="toc-text">队列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、队列的基本概念"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、队列的基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、队列的顺序存储结构"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、队列的顺序存储结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、队列的链式存储结构"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、队列的链式存储结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、双端队列"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、双端队列</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
