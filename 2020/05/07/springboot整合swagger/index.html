@@ -6,19 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | kindless</title>
+  <title>springboot整合swagger | kindless</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="SpringBoot整合swagger并且添加全局权限验证">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2020/03/28/hello-world/index.html">
+<meta property="og:title" content="springboot整合swagger">
+<meta property="og:url" content="http://yoursite.com/2020/05/07/springboot%E6%95%B4%E5%90%88swagger/index.html">
 <meta property="og:site_name" content="kindless">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="SpringBoot整合swagger并且添加全局权限验证">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-28T06:48:59.343Z">
-<meta property="article:modified_time" content="2020-03-28T06:48:59.343Z">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507181000.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507181125.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507181216.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507182108.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507182136.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507182246.png">
+<meta property="og:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507182506.png">
+<meta property="article:published_time" content="2020-05-07T09:58:10.000Z">
+<meta property="article:modified_time" content="2020-05-07T10:29:39.503Z">
 <meta property="article:author" content="kindless">
+<meta property="article:tag" content="springboot">
+<meta property="article:tag" content="swagger">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507181000.png">
   
     <link rel="alternative" href="/atom.xml" title="kindless" type="application/atom+xml">
   
@@ -181,39 +191,74 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-springboot整合swagger" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      springboot整合swagger
     </h1>
   
 
         
-        <a href="/2020/03/28/hello-world/" class="archive-article-date">
-  	<time datetime="2020-03-28T06:48:59.343Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
+        <a href="/2020/05/07/springboot%E6%95%B4%E5%90%88swagger/" class="archive-article-date">
+  	<time datetime="2020-05-07T09:58:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h5 id="SpringBoot整合swagger并且添加全局权限验证"><a href="#SpringBoot整合swagger并且添加全局权限验证" class="headerlink" title="SpringBoot整合swagger并且添加全局权限验证"></a>SpringBoot整合swagger并且添加全局权限验证</h5><a id="more"></a>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<ul>
+<li>首先需要在pom.xml文件里添加如下依赖</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<ul>
+<li>然后编写配置类</li>
+</ul>
+<blockquote>
+<p>该配置类主要配置了文档信息，不同状态的响应消息，api扫描的基础包，全局权限验证</p>
+<ul>
+<li>配置响应消息</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507181000.png" alt="image-20200507180952705"></p>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507181125.png" alt="image-20200507181123491"></p>
+<ul>
+<li>配置apiInfo</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507181216.png" alt="image-20200507181213080"></p>
+<ul>
+<li>配置全局权限验证</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507182108.png" alt="image-20200507182106753"></p>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507182136.png" alt="image-20200507182135208"></p>
+<ul>
+<li>最后在启动类或者配置类加上注解</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507182246.png" alt="image-20200507182245179"></p>
+<ul>
+<li>配置类代码</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kindless.billtest.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMethod;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.builders.PathSelectors;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.builders.RequestHandlerSelectors;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.builders.ResponseMessageBuilder;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.service.*;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.spi.DocumentationType;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.spi.service.contexts.SecurityContext;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.spring.web.plugins.Docket;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.swagger2.annotations.EnableSwagger2;</span><br><span class="line"><span class="keyword">import</span> top.kindless.billtest.config.properties.KindlessProperties;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableSwagger</span>2</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SwaggerConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> KindlessProperties kindlessProperties;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> List&lt;ResponseMessage&gt; globalResponses = Arrays.asList(</span><br><span class="line">            <span class="keyword">new</span> ResponseMessageBuilder().code(<span class="number">200</span>).message(<span class="string">"ok"</span>).build(),</span><br><span class="line">            <span class="keyword">new</span> ResponseMessageBuilder().code(<span class="number">400</span>).message(<span class="string">"Bad request"</span>).build(),</span><br><span class="line">            <span class="keyword">new</span> ResponseMessageBuilder().code(<span class="number">401</span>).message(<span class="string">"Unauthorized"</span>).build(),</span><br><span class="line">            <span class="keyword">new</span> ResponseMessageBuilder().code(<span class="number">403</span>).message(<span class="string">"Forbidden"</span>).build(),</span><br><span class="line">            <span class="keyword">new</span> ResponseMessageBuilder().code(<span class="number">404</span>).message(<span class="string">"Not found"</span>).build(),</span><br><span class="line">            <span class="keyword">new</span> ResponseMessageBuilder().code(<span class="number">500</span>).message(<span class="string">"Internal server error"</span>).build());</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SwaggerConfig</span><span class="params">(KindlessProperties kindlessProperties)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.kindlessProperties = kindlessProperties;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Docket <span class="title">docket</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">//        ParameterBuilder builder = new ParameterBuilder();</span></span><br><span class="line"><span class="comment">//        List&lt;Parameter&gt; parameters = new ArrayList&lt;&gt;();</span></span><br><span class="line"><span class="comment">//        builder.name("Authorization")</span></span><br><span class="line"><span class="comment">//                .description("验证令牌")</span></span><br><span class="line"><span class="comment">//                .modelRef(new ModelRef("string"))</span></span><br><span class="line"><span class="comment">//                .parameterType("header")</span></span><br><span class="line"><span class="comment">//                .required(false)</span></span><br><span class="line"><span class="comment">//                .build();</span></span><br><span class="line"><span class="comment">//        parameters.add(builder.build());</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Docket(DocumentationType.SWAGGER_2)</span><br><span class="line">                .apiInfo(<span class="keyword">new</span> ApiInfo(</span><br><span class="line">                        <span class="string">"自行车租赁系统api文档"</span>,</span><br><span class="line">                        <span class="string">"自行车租赁系统api文档"</span>,</span><br><span class="line">                        <span class="string">"1.0"</span>,</span><br><span class="line">                        <span class="string">"kind1ess.github.io"</span>,</span><br><span class="line">                        <span class="keyword">new</span> Contact(<span class="string">"kindless"</span>,<span class="string">"https://kind1ess.github.io"</span>,<span class="string">"2411347677@qq.com"</span>),</span><br><span class="line">                        <span class="string">"Apache 2.0"</span>,</span><br><span class="line">                        <span class="string">"http://www.apache.org/licenses/LICENSE-2.0"</span>,</span><br><span class="line">                        <span class="keyword">new</span> ArrayList()))</span><br><span class="line">                .enable(kindlessProperties.isEnableSwagger())</span><br><span class="line">                .globalResponseMessage(RequestMethod.GET,globalResponses)</span><br><span class="line">                .globalResponseMessage(RequestMethod.POST,globalResponses)</span><br><span class="line">                .globalResponseMessage(RequestMethod.PUT,globalResponses)</span><br><span class="line">                .globalResponseMessage(RequestMethod.DELETE,globalResponses)</span><br><span class="line">                .select()</span><br><span class="line">                .apis(RequestHandlerSelectors.basePackage(<span class="string">"top.kindless.billtest.controller"</span>))</span><br><span class="line">                .build()</span><br><span class="line">                .securitySchemes(securitySchemes())</span><br><span class="line">                .securityContexts(securityContexts());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> List&lt;ApiKey&gt; <span class="title">securitySchemes</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;ApiKey&gt; apiKeys = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        apiKeys.add(<span class="keyword">new</span> ApiKey(<span class="string">"Authorization"</span>, <span class="string">"Authorization"</span>, <span class="string">"header"</span>));</span><br><span class="line">        <span class="keyword">return</span> apiKeys;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> List&lt;SecurityContext&gt; <span class="title">securityContexts</span><span class="params">()</span></span>&#123;</span><br><span class="line">        List&lt;SecurityContext&gt; securityContexts = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        securityContexts.add(</span><br><span class="line">          SecurityContext.builder()</span><br><span class="line">                .securityReferences(defaultAuth())</span><br><span class="line">                .forPaths(PathSelectors.regex(<span class="string">"/api/.*"</span>))</span><br><span class="line">                .build()</span><br><span class="line">        );</span><br><span class="line">        <span class="keyword">return</span> securityContexts;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> List&lt;SecurityReference&gt; <span class="title">defaultAuth</span><span class="params">()</span></span>&#123;</span><br><span class="line">        AuthorizationScope[] authorizationScopes =  &#123;<span class="keyword">new</span> AuthorizationScope(<span class="string">"global"</span>,<span class="string">"accessEverything"</span>)&#125;;</span><br><span class="line">        List&lt;SecurityReference&gt; securityReferences = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        securityReferences.add(<span class="keyword">new</span> SecurityReference(<span class="string">"Authorization"</span>,authorizationScopes));</span><br><span class="line">        <span class="keyword">return</span> securityReferences;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li>在需要注明的api上加上注解</li>
+</ul>
+<blockquote>
+<ul>
+<li><code>@ApiOperation</code>注解，注在controller方法上用于注释这个api接口的作用</li>
+</ul>
+<p><img src="https://kind1ess-blog-img.oss-cn-beijing.aliyuncs.com/img/20200507182506.png" alt="image-20200507182501891"></p>
+<ul>
+<li><code>@ApiParam</code>注解，注在controller方法参数上，用于描述参数</li>
+<li><code>@ApiModelProperty</code>，注在model（vo、entity）属性上，用于描述属性，该注解还有个属性<code>hidden</code>用于表明是否在api文档隐藏这个属性，默认为false</li>
+</ul>
+</blockquote>
 
       
 
@@ -253,6 +298,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">swagger</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -303,7 +363,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://kind1ess.github.io/2020/03/28/hello-world/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://kind1ess.github.io/2020/05/07/springboot%E6%95%B4%E5%90%88swagger/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -317,15 +377,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0day007/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数据结构学习笔记day007
-        
-      </div>
-    </a>
   
+    <a href="/2020/04/25/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0001/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java学习笔记001</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -350,7 +406,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#SpringBoot整合swagger并且添加全局权限验证"><span class="toc-number">1.</span> <span class="toc-text">SpringBoot整合swagger并且添加全局权限验证</span></a></li></ol>
                     </div>
                 </span>
             </div>
